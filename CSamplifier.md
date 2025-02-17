@@ -29,7 +29,37 @@ In the saturation region, a n-type MOSFET functions as a Voltage-Controlled Curr
    1kHz.In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the 
    circuit’s response to a time-varying signal.
 
-# Circuit 01 
-  ![Screenshot 2025-02-17 010113](https://github.com/user-attachments/assets/4c03dc99-a315-44dd-81d2-eeb03ddcf597)
+## Circuit 01 :
+  <img src= "https://github.com/user-attachments/assets/4c03dc99-a315-44dd-81d2-eeb03ddcf597" width = "1100" height = "300">
+## Calculation : Given 
+Power = 50uW ; 
+
+
+
+
+## Results 
+
+1. DC Analysis (DC Sweep) 
+  <img src= "https://github.com/user-attachments/assets/ccff7d05-9f5f-47cd-97ca-4de98a0fe1dc" width = "1100" height = "300">
+
+       Id = 0.1527mA; Vout = 1.647V; length of channel L = 180nm; width of channel W = 1um; DC Operating point (1.647V, 0.1527mA)
+
+2. AC Analysis
+  <img src= "https://github.com/user-attachments/assets/9821236d-b08b-4eb3-b183-9dc7a5d2a505" width = "1100" height = "250">
+  Gain =
+
+4. Transient Analysis
+  <img src= "https://github.com/user-attachments/assets/57e63e5b-7f13-4fd3-a4ff-955841bf0d2c" width = "1100" height = "250">
+  There is a 180 degree phase shift between input and output signal as expected.
+
+
+
+
+
+
+
+
+
+  
 
    
