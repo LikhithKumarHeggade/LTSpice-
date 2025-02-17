@@ -22,7 +22,7 @@ In the saturation region, a n-type MOSFET functions as a Voltage-Controlled Curr
    the CMOSN transistor, set the channel length to 180nm and the channel width to 1um.
 4. Under the "Simulate" option select "Configure Analysis", then choose the appropriate analysis mode (DC, AC, or Transient analysis) based on the circuit 
    requirements. Configure the necessary parameters and run the simulation to observe the circuit's behavior.
-5. DC Analysis - Apply the DC voltage of Vdd = 1.8V and Vgs = 0.9V , Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and press OK to apply 
+5. DC Analysis - Apply the DC voltage of Vdd = 1.8V and Vgs = 0.6V , Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and press OK to apply 
    the .op command. Then choose Run in the tab to see the DC operating point, including Vout and Id.
 6. AC Analysis - Go to Spice Directive and set the library file path. In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to 
    Decade, points to 20, and frequency from 0.1 Hz to 1 THz, then choose OK. Finally, choose Run to analyze gain and frequency response.                            9. Transiet Analysis - In the Voltage Source settings, go to the Advanced menu and set a sine wave input with Vgs = 0.9V, an amplitude of 50mV, and a frequency of 
@@ -31,34 +31,54 @@ In the saturation region, a n-type MOSFET functions as a Voltage-Controlled Curr
 
 ## Circuit 01 :
   <img src= "https://github.com/user-attachments/assets/4c03dc99-a315-44dd-81d2-eeb03ddcf597" width = "1100" height = "300">
-## Calculation : Given 
-Power = 50uW ; 
 
-
-
-
-## Results 
+## Results :
 
 1. DC Analysis (DC Sweep) 
-  <img src= "https://github.com/user-attachments/assets/ccff7d05-9f5f-47cd-97ca-4de98a0fe1dc" width = "1100" height = "300">
+  <img src= "https://github.com/user-attachments/assets/e19f1e87-5857-470b-b141-74436ad35724" width = "1100" height = "300">
 
-       Id = 0.1527mA; Vout = 1.647V; length of channel L = 180nm; width of channel W = 1um; DC Operating point (1.647V, 0.1527mA)
+       Id = 27.727uA ; Vout = 1.77227V; length of channel L = 180nm; width of channel W = 1.08um ; DC Operating point (1.7727V, 27.727uA)
 
 2. AC Analysis
   <img src= "https://github.com/user-attachments/assets/9821236d-b08b-4eb3-b183-9dc7a5d2a505" width = "1100" height = "250">
-  Gain =
+  Gain = -3dB 
 
-4. Transient Analysis
-  <img src= "https://github.com/user-attachments/assets/57e63e5b-7f13-4fd3-a4ff-955841bf0d2c" width = "1100" height = "250">
+3. Transient Analysis
+  <img src= "https://github.com/user-attachments/assets/30d5414c-2e76-4a71-b7f7-39791dc87218" width = "1100" height = "250">
   There is a 180 degree phase shift between input and output signal as expected.
 
+4. Inference
+The drain current increases with MOSFET width and decreases with length. For amplification, the MOSFET must operate in the saturation region, ensuring a stable Q-point and linear gain. The amplifier produces a 180° phase shift to the amplified output signal. Transient analysis helps in understanding time-domain response, while AC analysis aids in frequency response and impedance matching. These factors are crucial for designing efficient amplifiers.
+
+## Circuit 02 : 
+A MOSFET in a diode-connected configuration stays in saturation mode and primarily functions as a current source with a stable output. In certain conditions, it can also provide amplification. To study its behavior, DC, AC, and transient analyses are commonly used. The drain current is determined by the equation
+
+                                        Id = 1/2*Kn*Vov^2 ; Kn = W/L*unCox ; Vov = Vgs - Vt  
+
+   <img src= "https://github.com/user-attachments/assets/6ecfdb99-b7f2-4e84-b6aa-9ae0aa558b86" width = "1100" height = "300">
+
+
+
+
+1. DC Analysis (DC Sweep) 
 
 
 
 
 
+2. AC Analysis
 
 
+
+
+
+3. Transient Analysis
+
+
+
+
+
+4. Inference 
 
   
 
