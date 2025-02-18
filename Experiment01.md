@@ -26,9 +26,10 @@ In the saturation region, a n-type MOSFET functions as a Voltage-Controlled Curr
 5. DC Analysis - Apply the DC voltage of Vdd = 1.8V and Vgs = 0.6V , Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and press OK to apply 
    the .op command. Then choose Run in the tab to see the DC operating point, including Vout and Id.
 6. AC Analysis - Go to Spice Directive and set the library file path. In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to 
-   Decade, points to 20, and frequency from 0.1 Hz to 1 THz, then choose OK. Finally, choose Run to analyze gain and frequency response.                            9. Transiet Analysis - In the Voltage Source settings, go to the Advanced menu and set a sine wave input with Vgs = 0.9V, an amplitude of 50mV, and a frequency of 
-   1kHz.In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the 
-   circuit’s response to a time-varying signal.
+   Decade, points to 20, and frequency from 0.1 Hz to 1 THz, then choose OK. Finally, choose Run to analyze gain and frequency response.     
+
+
+7. Transiet Analysis - In the Voltage Source settings, go to the Advanced menu and set a sine wave input with Vgs = 0.6V, an amplitude of 50mV, and a frequency of 1kHz.In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the circuit’s response to a time-varying signal.
 
 ## Circuit 01 :
   <img src= "https://github.com/user-attachments/assets/e5df7d35-3d60-44e4-b528-7da9bfd39b71" width = "1100" height = "300">
