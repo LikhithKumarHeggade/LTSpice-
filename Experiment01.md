@@ -32,32 +32,31 @@ In the saturation region, a n-type MOSFET functions as a Voltage-Controlled Curr
 7. Transiet Analysis - In the Voltage Source settings, go to the Advanced menu and set a sine wave input with Vgs = 0.6V, an amplitude of 50mV, and a frequency of 1kHz.In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the circuit’s response to a time-varying signal.
 
 ## Circuit 01 :
-  <img src= "https://github.com/user-attachments/assets/e5df7d35-3d60-44e4-b528-7da9bfd39b71" width = "1100" height = "300">
+  <img src= "https://github.com/user-attachments/assets/e5df7d35-3d60-44e4-b528-7da9bfd39b71" width = "1100" height = "500">
 
 ## Results :
 
 1. DC Analysis (DC Sweep) 
  
-  <img src= "https://github.com/user-attachments/assets/e19f1e87-5857-470b-b141-74436ad35724" width = "1100" height = "300">
+  <img src= "https://github.com/user-attachments/assets/e19f1e87-5857-470b-b141-74436ad35724" width = "1100" height = "500">
 
        Id = 27.727uA ; Vout = 1.77227V; length of channel L = 180nm; width of channel W = 1.08um ; DC Operating point (1.7727V, 27.727uA)
 
 2. AC Analysis
  
-  <img src= "https://github.com/user-attachments/assets/76fec5ea-0c13-4b3d-86cf-c70c06d85c41" width = "1100" height = "250">
+  <img src= "https://github.com/user-attachments/assets/76fec5ea-0c13-4b3d-86cf-c70c06d85c41" width = "1100" height = "300">
 
 
-  <img src= "https://github.com/user-attachments/assets/c84bd1cc-6c26-46ea-83be-4c5b0f44cf20" width = "1100" height = "250">
+  <img src= "https://github.com/user-attachments/assets/c84bd1cc-6c26-46ea-83be-4c5b0f44cf20" width = "1100" height = "300">
  
   Formula to Find gain Av = -gm*Rd 
   
-                                                              Gain = -0.31328
-
-
+                                                    Gain = -0.316*0.001*1000 ;   Gain = -0.316
+                                                    
 
 4. Transient Analysis
  
-  <img src= "https://github.com/user-attachments/assets/e8523fe3-4e26-4a37-8b9f-30c2faf6dbaf" width = "1100" height = "250">
+  <img src= "https://github.com/user-attachments/assets/e8523fe3-4e26-4a37-8b9f-30c2faf6dbaf" width = "1100" height = "300">
   There is a 180 degree phase shift between input and output signal as expected
 
 5. Inference
@@ -68,19 +67,18 @@ The drain current increases with MOSFET width and decreases with length. For amp
 A MOSFET in a diode-connected configuration stays in saturation mode and primarily functions as a current source with a stable output. In certain conditions, it can also provide amplification. To study its behavior, DC, AC, and transient analyses are commonly used. The drain current is determined by the equation
 
                                         Id = 1/2*Kn*Vov^2 ; Kn = W/L*unCox ; Vov = Vgs - Vt  
-#### Instead of Resistor of 1K ohm PMOS is used with Gate voltage - -5V ; Input Gate voltage to NMOS - 0.9V
+#### Instead of Resistor of 1K ohm PMOS is used with Gate voltage = [1.8-0.3906 = 1.4094 V] ; Input Gate voltage to NMOS = 0.9V ; VTHO for PMOS = 0.3906
 
-   <img src= "https://github.com/user-attachments/assets/6ecfdb99-b7f2-4e84-b6aa-9ae0aa558b86" width = "1100" height = "300">
+   <img src= "https://github.com/user-attachments/assets/bfbdb18a-e1ca-4265-955a-a94761e942e5" width = "1100" height = "500">
 
 
 
 
 1. DC Analysis (DC Sweep) 
 
-<img src= "https://github.com/user-attachments/assets/44305ed1-6248-4619-9d07-f137ad64e41b" width = "1100" height = "300">
+<img src= "https://github.com/user-attachments/assets/666c5457-3cfe-4e4a-80ea-61b1538fd395" width = "1100" height = "500">
 
-       Id = 0.1611A ;  Vout =1.556641V ; length of channel L = 180nm; width of channel W = 1.08um For both P & Nmos ; DC Operating point (1.556641V,0.1611A )
-
+       Id = 27.586 uA ;  Vout = 0.0352 V ; length of channel L = 1200 nm; width of channel W = 0.09 um For PMOS ; DC Operating point (0.0352,27.586 )
 
 
 
@@ -88,14 +86,7 @@ A MOSFET in a diode-connected configuration stays in saturation mode and primari
 
 3. AC Analysis
 
-  <img src= "https://github.com/user-attachments/assets/90b38b9c-ce85-4b64-9c02-7f20c9eb67c8" width = "1100" height = "250">
-
-
-
-  <img src= "https://github.com/user-attachments/assets/7f5a8b0a-ae0d-4b33-b19f-69011da61cf7" width = "1100" height = "250">
-
-                                                               Gain = -0.770
-
+  <img src= "https://github.com/user-attachments/assets/31b9edbd-7896-4a74-83f4-3043356d738f" width = "1100" height = "300">
 
 
 
@@ -103,14 +94,32 @@ A MOSFET in a diode-connected configuration stays in saturation mode and primari
 4. Transient Analysis
 
 
-  <img src= "https://github.com/user-attachments/assets/9f2fbee1-e9d6-42fa-8783-fe28f028cbdd" width = "1100" height = "250">
+  <img src= "https://github.com/user-attachments/assets/56212689-5e27-46f6-8b38-e5b743e9938a" width = "1100" height = "300">
 
 
+                                        Gain = Voutp-p / Vinp-p ; Gain = 8.8mV/100mV ; Gain = -0.088
 
 
 
 5. Inference
 
 The common-source amplifier with an active load operates effectively as a CMOS inverter. DC analysis verified proper biasing, while AC analysis highlighted its frequency response. Transient analysis confirmed that the circuit amplifies signals with minimal distortion. The results indicate that this design is efficient and provides good gain. This makes it a strong candidate for amplification applications. Additionally, its simplicity and ease of integration make it useful in various circuits.
+NMOS : W = 1.08um ; L = 180nm , PMOS : W = 0.09um ; L = 1200nm
+
+Gain for ciruit 01 = -0.316
+
+Gain for circuit 02 = -0.088
+
+power for circuit 01 ; P=V*I= 1.8 * 27.727u == 49.908 uW.
+
+power for circuit 02 ; P=V*I= 1.8 * 27.586u ==  49.6548 uW.
+
+Vb : -1.4094V
+
+Vgs : 0.9V
+
+Vdd : 1.8V
+
+Rd : 1K ohms 
 
    
