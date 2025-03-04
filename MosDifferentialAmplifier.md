@@ -12,4 +12,4 @@ Identical PMOSET and NMOSFETs, Identical Resistors Rd, Resistor Rss and DC volta
 
 
 ##### CIRCUIT DIAGRAM OF MOSFET DIFFERENTIAL PAIR AMPLIFIER 
-   <img src= "https://github.com/user-attachments/assets/2fe91466-6337-4ecd-b508-a1f53d9e014c" width = "600" height = "400">
+   <img src= "https://github.com/user-attachments/assets/2fe91466-6337-4ecd-b508-a1f53d9e014c" width = "300" height = "200">
