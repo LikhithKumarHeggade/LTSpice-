@@ -30,7 +30,7 @@ Identical PMOSET and NMOSFETs, Identical Resistors Rd, Resistor Rss and DC volta
 5. DC Analysis - Apply the DC voltage of Vdd = 1.8V and Vgs = 0.95V , Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and press OK to 
    apply the .op command. Then choose Run in the tab to see the DC operating point, including Vout and Id.
 6. AC Analysis - Go to Spice Directive and set the library file path. In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to 
-   Decade, points to 20, and frequency from 0.1 Hz to 1 THz, then choose OK. Finally, choose Run to analyze gain and frequency response.     
+   Decade, points to 10, and frequency from 1 Hz to 1000 GHz, then choose OK. Finally, choose Run to analyze gain and frequency response.     
 7. Transiet Analysis - In the Voltage Source settings, go to the Advanced menu and set a sine wave input with Vg = 0.95V, an amplitude of 50mV, and a frequency of 1kHz.In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the circuit’s response to a time-varying signal.
 
 ##### MOSFET DIFFERENTIAL PAIR AMPLIFIER CIRCUIT DIAGRAM 
@@ -48,7 +48,7 @@ Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and pre
   
    <img src= "https://github.com/user-attachments/assets/59dc9f46-e61b-45f8-a455-cafd7a1808a7" width = "600" height = "450">
                                   
-                              Id1 = Id2 => 6.109mA , Vocm1 = Vocm2 => 1.1001V 
+                              Id1 = Id2 => 6.109mA , Vocm1 = Vocm2 -> 1.1001V 
                               Operating point of NMOSFETS = (1.1001 V, 6.109mA)
 ### TRANSIENT ANALYSIS 
 In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the circuit’s response to a time-varying signal.
@@ -58,9 +58,62 @@ In the Simulate tab choose Configure Analysis select Transient Analysis set the 
  There is a 180 degree phase shift between input and output signal as expected. 
  
                               Voltage Gain = Vop-p/Vip-p ; (1.1717-1.0284 )/0.1 ; 1.433V/V 
-                              Voltage Gain in dB = 20*log[1.433] => 3.12 dB
+                              Voltage Gain in dB = 20*log[1.433] -> 3.12 dB; Common mode gain
 ### AC ANALYSIS
-In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to Decade, points to 20, and frequency from 0.1 Hz to 1 THz, then choose OK. Finally, choose Run to analyze gain and frequency response.
+In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to Decade, points to 20, and frequency from 1 Hz to 1000 GHz, then choose OK. Finally, choose Run to analyze gain and frequency response.
 <img src= "https://github.com/user-attachments/assets/745189a7-cf42-405e-ada4-aa33c44a60ba" width = "600" height = "450">
+
+### CIRCUIT 02  [RESISTOR REPLACED WITH CURRENT SOURCE]
+   <img src= "https://github.com/user-attachments/assets/cf1916f6-ecae-4554-8bed-6fa69dc296f7" width = "600" height = "500">
+
+### DC ANALYSIS
+W & L is not altered.
+  
+   <img src= "https://github.com/user-attachments/assets/4ec265ac-157f-4b21-836a-f9a11d58a775" width = "600" height = "450">
+                              
+                              Id1 = Id2 -> 6.1092mA , Vocm1 = Vocm2 -> 1.10009V 
+                              Operating point of NMOSFETS = (1.10009 V, 6.1092mA)
+
+### TRANSIENT ANALYSIS 
+   <img src= "https://github.com/user-attachments/assets/210ba4d4-fe14-414b-930c-2a0cf1bf8262" width = "600" height = "450">
+   
+                              Voltage Gain = Vop-p/Vip-p ; (1.5369-0.0066328)/0.1 ; 8.7362 V/V 
+                              Voltage Gain in dB = 20*log[8.7362] -> 18.823 dB
+### AC ANALYSIS
+<img src= "https://github.com/user-attachments/assets/c7b566b4-82cd-4a3a-b2e7-0239015329b0" width = "600" height = "450">
+                              
+                              Gain in dB = 19.86 
+### CIRCUIT 03 [CURRENT SOURCE REPLACED WITH NMOSFET]
+   <img src= "https://github.com/user-attachments/assets/f90d863f-777e-4f75-b00a-cb8682be7d19" width = "600" height = "500">
+
+
+At the boundary of saturation region 
+
+Vds = Vgs - Vt ( Vds = Vp -> 0.4V )
+
+0.4 + 0.36624 = Vg ( since source is grounded )
+
+Vbias -> Vg = 0.76624V ( Bias voltage at the gate for 3rd n type mosfet)
+
+### DC ANALYSIS 
+The width and length of the differential pair MOSFETs remain unchanged, while the third MOSFET has a width of 21.69um and a length of 180nm.
+ 
+   <img src= "https://github.com/user-attachments/assets/b0a39c18-aae7-4ff4-9255-fb6e0c5c138e" width = "600" height = "450">
+                          
+                              Id1 = Id2 => 6.1049mA , Vocm1 = Vocm2 -> 1.10058V 
+                              Operating point of NMOSFETS = (1.10058 V, 6.1049mA)
+### TRANSIENT ANALYSIS 
+
+   <img src= "https://github.com/user-attachments/assets/97925994-02d3-42dd-a5f2-25d30fc25df4" width = "600" height = "450">
+                
+                              Voltage Gain = Vop-p/Vip-p ; (1.53566-0.006606)/0.1 ; 15.29054 V/V 
+                              Voltage Gain in dB = 20*log[15.29054] ->  23.69 dB
+### AC ANALYSIS
+
+<img src= "https://github.com/user-attachments/assets/cfe08f55-bf04-4840-865d-11553cebf1a1" width = "600" height = "450">
+
+                              Gain in dB = 19.86 
+
+### INFERENCE 
 
 
