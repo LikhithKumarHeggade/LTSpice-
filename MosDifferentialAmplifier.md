@@ -75,14 +75,16 @@ W & L is not altered.
                               Operating point of NMOSFETS = (1.10009 V, 6.1092mA)
 
 ### TRANSIENT ANALYSIS 
-   <img src= "https://github.com/user-attachments/assets/210ba4d4-fe14-414b-930c-2a0cf1bf8262" width = "600" height = "450">
-   
+   <img src= "https://github.com/user-attachments/assets/bdbe1ff2-bcd3-4be0-a780-835b991f9948" width = "600" height = "450">
+
                               Voltage Gain = Vop-p/Vip-p ; (1.5369-0.0066328)/0.1 ; 8.7362 V/V 
                               Voltage Gain in dB = 20*log[8.7362] -> 18.823 dB
+
 ### AC ANALYSIS
 <img src= "https://github.com/user-attachments/assets/c7b566b4-82cd-4a3a-b2e7-0239015329b0" width = "600" height = "450">
                               
                               Gain in dB = 19.86 
+
 ### CIRCUIT 03 [CURRENT SOURCE REPLACED WITH NMOSFET]
    <img src= "https://github.com/user-attachments/assets/f90d863f-777e-4f75-b00a-cb8682be7d19" width = "600" height = "500">
 
@@ -101,7 +103,9 @@ The width and length of the differential pair MOSFETs remain unchanged, while th
    <img src= "https://github.com/user-attachments/assets/b0a39c18-aae7-4ff4-9255-fb6e0c5c138e" width = "600" height = "450">
                           
                               Id1 = Id2 => 6.1049mA , Vocm1 = Vocm2 -> 1.10058V 
-                              Operating point of NMOSFETS = (1.10058 V, 6.1049mA)
+   
+                            Operating point of NMOSFETS = (1.10058 V, 6.1049mA)
+
 ### TRANSIENT ANALYSIS 
 
    <img src= "https://github.com/user-attachments/assets/97925994-02d3-42dd-a5f2-25d30fc25df4" width = "600" height = "450">
