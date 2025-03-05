@@ -48,8 +48,8 @@ Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and pre
   
    <img src= "https://github.com/user-attachments/assets/59dc9f46-e61b-45f8-a455-cafd7a1808a7" width = "600" height = "450">
                                   
-                              Id1 = Id2 => 6.109mA , Vocm1 = Vocm2 -> 1.1001V 
-                              Operating point of NMOSFETS = (1.1001 V, 6.109mA)
+                              Id1 = Id2 => 0.6109mA , Vocm1 = Vocm2 -> 1.1001V 
+                              Operating point of NMOSFETS = (1.1001 V, 0.6109mA)
 ### TRANSIENT ANALYSIS 
 In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the circuit’s response to a time-varying signal.
 
@@ -71,8 +71,8 @@ W & L is not altered.
   
    <img src= "https://github.com/user-attachments/assets/4ec265ac-157f-4b21-836a-f9a11d58a775" width = "600" height = "450">
                               
-                              Id1 = Id2 -> 6.1092mA , Vocm1 = Vocm2 -> 1.10009V 
-                              Operating point of NMOSFETS = (1.10009 V, 6.1092mA)
+                              Id1 = Id2 -> 0.61092mA , Vocm1 = Vocm2 -> 1.10009V 
+                              Operating point of NMOSFETS = (1.10009 V, 0.61092mA)
 
 ### TRANSIENT ANALYSIS 
    <img src= "https://github.com/user-attachments/assets/bdbe1ff2-bcd3-4be0-a780-835b991f9948" width = "600" height = "450">
@@ -102,9 +102,9 @@ The width and length of the differential pair MOSFETs remain unchanged, while th
  
    <img src= "https://github.com/user-attachments/assets/b0a39c18-aae7-4ff4-9255-fb6e0c5c138e" width = "600" height = "450">
                           
-                              Id1 = Id2 => 6.1049mA , Vocm1 = Vocm2 -> 1.10058V 
+                              Id1 = Id2 => 0.61049mA , Vocm1 = Vocm2 -> 1.10058V 
    
-                            Operating point of NMOSFETS = (1.10058 V, 6.1049mA)
+                            Operating point of NMOSFETS = (1.10058 V, 0.61049mA)
 
 ### TRANSIENT ANALYSIS 
 
