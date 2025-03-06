@@ -96,7 +96,7 @@ W & L is not altered.
    <img src= "https://github.com/user-attachments/assets/f90d863f-777e-4f75-b00a-cb8682be7d19" width = "600" height = "500">
 
 
-At the boundary of saturation region 
+W.K.T
 
 Vds = Vgs - Vt ( Vds = Vp -> 0.4V )
 
