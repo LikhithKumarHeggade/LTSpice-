@@ -39,6 +39,7 @@ Identical PMOSET and NMOSFETs, Identical Resistors Rd, Resistor Rss and DC volta
 ##### CALCULATIONS 
 <img src= "https://github.com/user-attachments/assets/43f3587c-e1ac-458c-b01d-159e27bbed18" width = "700" height = "600">
 
+
 ### CIRCUIT 01 
    <img src= "https://github.com/user-attachments/assets/cb563cc9-5bec-4f87-b549-3c7307f3e497" width = "600" height = "500">
   
@@ -52,6 +53,32 @@ Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and pre
                                   
                               Id1 = Id2 => 0.6109mA , Vocm1 = Vocm2 -> 1.1001V 
                               Operating point of NMOSFETS = (1.1001 V, 0.6109mA)
+
+Maximum and Minimum Common mode input voltage ( Common mode input range )
+1. Vicm(max)
+ 
+   from the circuit
+
+   Vd = Vdd - IdRd 
+
+   at the mosfet's triode saturation boundary
+
+   Vds = Vgs - Vt
+
+   Vg = Vd + Vt
+
+   Vicm(max) = Vt + Vdd - IdRd
+
+   Vicm(max) = 0.3226 + 1.8 + 0.611*1.1456
+
+   Vicm(max) = 1.4222
+   
+3. Vicm(min)
+
+   Vicm(min) = Vgs + Vp 
+
+   Vicm(min) = 0.95
+
 ### TRANSIENT ANALYSIS 
 In the Simulate tab choose Configure Analysis select Transient Analysis set the stop time to 5m and choose OK (.tran 5m). Finally choose Run to observe the circuit’s response to a time-varying signal.
 
@@ -80,7 +107,7 @@ W & L is not altered.
                               
                               Id1 = Id2 -> 0.61092mA , Vocm1 = Vocm2 -> 1.10009V 
                               Operating point of NMOSFETS = (1.10009 V, 0.61092mA)
-
+   
 ### TRANSIENT ANALYSIS 
    <img src= "https://github.com/user-attachments/assets/bdbe1ff2-bcd3-4be0-a780-835b991f9948" width = "600" height = "450">
 
@@ -90,7 +117,7 @@ W & L is not altered.
 ### AC ANALYSIS
 <img src= "https://github.com/user-attachments/assets/c7b566b4-82cd-4a3a-b2e7-0239015329b0" width = "600" height = "450">
                               
-                              Gain in dB = 19.86 ; Gain = 9..874 V/V
+                              Gain in dB = 19.86 ; Gain = 9.874 V/V
 
 ### CIRCUIT 03 [CURRENT SOURCE REPLACED WITH NMOSFET]
    <img src= "https://github.com/user-attachments/assets/f90d863f-777e-4f75-b00a-cb8682be7d19" width = "600" height = "500">
@@ -113,6 +140,26 @@ The width and length of the differential pair MOSFETs remain unchanged, while th
    
                             Operating point of NMOSFETS = (1.10058 V, 0.61049mA)
 
+1. Vicm(max)
+
+   from the circuit
+
+   Vd = Vdd - IdRd 
+
+   at the mosfet's triode saturation boundary
+
+   Vds = Vgs - Vt
+
+   Vg = Vd + Vt
+
+   Vicm(max) = Vt + Vdd - IdRd
+
+   
+3. Vicm(min)
+
+   Vicm(min) = Vgs + Vbias - Vt 
+
+   
 ### TRANSIENT ANALYSIS 
 
    <img src= "https://github.com/user-attachments/assets/97925994-02d3-42dd-a5f2-25d30fc25df4" width = "600" height = "450">
@@ -126,5 +173,22 @@ The width and length of the differential pair MOSFETs remain unchanged, while th
                               Gain in dB = 19.844 ; Gain = 9.822 V/V
 
 ### INFERENCE 
+In this experiment, we explored the working principles of a differential amplifier along with its various configurations.
+We implemented three distinct configurations—resistor, current source, and NMOS—each operating differently, leading to variations in voltage gain and MOSFET stability
 
+Operating point of Circuit 01 = (1.1001 V, 0.6109mA)
 
+Operating point of Circuit 02 = (1.10009 V, 0.61092mA) 
+
+Operating point of Circuit 03 = (1.10058 V, 0.61049mA)
+
+Gain of circuit 01 =  9.817 V/V 
+
+Gain of circuit 02 = 9.874 V/V
+
+Gain of circuit 03 = 9.822 V/V
+
+The output common-mode voltage (Vocm) remains around 1.1V, aligning well with the design specification.
+The bias current (≈ 0.61mA) is stable across all configurations, indicating that the circuit is properly biased.
+The resistor load (Circuit 01) provides a gain of 9.817 V/V, influenced by The current source load (Circuit 02) achieves a slightly higher gain of 9.874 V/V, as an ideal current source has a high output impedance, maximizing gain.The NMOS load (Circuit 03) shows a gain of 9.822 V/V, close to the resistor load, due to the active load’s finite output impedance.
+This experiment successfully demonstrates how different load configurations impact differential amplifier performance.
