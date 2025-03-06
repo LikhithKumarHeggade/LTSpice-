@@ -37,10 +37,12 @@ Identical PMOSET and NMOSFETs, Identical Resistors Rd, Resistor Rss and DC volta
    <img src= "https://github.com/user-attachments/assets/2fe91466-6337-4ecd-b508-a1f53d9e014c" width = "300" height = "200">
 
 ##### CALCULATIONS 
-<img src= "" width = "400" height = "250">
+<img src= "https://github.com/user-attachments/assets/43f3587c-e1ac-458c-b01d-159e27bbed18" width = "700" height = "600">
 
 ### CIRCUIT 01 
    <img src= "https://github.com/user-attachments/assets/cb563cc9-5bec-4f87-b549-3c7307f3e497" width = "600" height = "500">
+  
+   <img src= "https://github.com/user-attachments/assets/80b29cff-b01b-4e9f-a75d-1f3f541104cb" width = "600" height = "500">
 
 
 ### DC ANALYSIS
@@ -62,6 +64,11 @@ In the Simulate tab choose Configure Analysis select Transient Analysis set the 
 ### AC ANALYSIS
 In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to Decade, points to 20, and frequency from 1 Hz to 1000 GHz, then choose OK. Finally, choose Run to analyze gain and frequency response.
 <img src= "https://github.com/user-attachments/assets/745189a7-cf42-405e-ada4-aa33c44a60ba" width = "600" height = "450">
+<img src= "https://github.com/user-attachments/assets/47a6b3c4-ef1e-4fb1-866f-34ddaec132a9" width = "600" height = "450">
+
+
+                              Vid = Vg1 - Vg2 ; 2V
+                              differential gain = (Vd1 - Vd2)/ Vid ; (9.817 + 9.817)/2 -> 9.817 V/V 
 
 ### CIRCUIT 02  [RESISTOR REPLACED WITH CURRENT SOURCE]
    <img src= "https://github.com/user-attachments/assets/cf1916f6-ecae-4554-8bed-6fa69dc296f7" width = "600" height = "500">
@@ -83,7 +90,7 @@ W & L is not altered.
 ### AC ANALYSIS
 <img src= "https://github.com/user-attachments/assets/c7b566b4-82cd-4a3a-b2e7-0239015329b0" width = "600" height = "450">
                               
-                              Gain in dB = 19.86 
+                              Gain in dB = 19.86 ; Gain = 9..874 V/V
 
 ### CIRCUIT 03 [CURRENT SOURCE REPLACED WITH NMOSFET]
    <img src= "https://github.com/user-attachments/assets/f90d863f-777e-4f75-b00a-cb8682be7d19" width = "600" height = "500">
@@ -116,7 +123,7 @@ The width and length of the differential pair MOSFETs remain unchanged, while th
 
 <img src= "https://github.com/user-attachments/assets/cfe08f55-bf04-4840-865d-11553cebf1a1" width = "600" height = "450">
 
-                              Gain in dB = 19.86 
+                              Gain in dB = 19.844 ; Gain = 9.822 V/V
 
 ### INFERENCE 
 
