@@ -23,7 +23,7 @@ A current mirror circuit is used to generate a stable and precise current that r
 ### PROCEDURE  
 1. Create a folder named LTSpice in your PC/Laptop and save all the ltspice files in this folder.
 2. Download the TSMC library datasheet from a reliable online source and place it in the directory where LTSpice is installed.
-3. Open a new schematic in LTSpice and name it "MOS Differential Amplifier Ckt". Construct the required circuit and rename the MOSFETs as CMOSN (for nmos) and 
+3. Open a new schematic in LTSpice and name it "CurrentMirrorCkt". Construct the required circuit and rename the MOSFETs as CMOSN (for nmos) and 
    CMOSP (for pmos). For the CMOSN transistor, set the channel length to 180nm and the channel width to 3.5 um.
 4. Under the "Simulate" option select "Configure Analysis", then choose the appropriate analysis mode (DC, AC, or Transient analysis) based on the circuit 
    requirements. Configure the necessary parameters and run the simulation to observe the circuit's behavior.
