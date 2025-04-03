@@ -24,11 +24,10 @@ A current mirror circuit is used to generate a stable and precise current that r
 1. Create a folder named LTSpice in your PC/Laptop and save all the ltspice files in this folder.
 2. Download the TSMC library datasheet from a reliable online source and place it in the directory where LTSpice is installed.
 3. Open a new schematic in LTSpice and name it "MOS Differential Amplifier Ckt". Construct the required circuit and rename the MOSFETs as CMOSN (for nmos) and 
-   CMOSP (for pmos). For the CMOSN transistor, set the channel length to 200nm and the channel width to 120.29um , give the values for resistors Rd1, Rd2 and Rss 
-   based on calculated value
+   CMOSP (for pmos). For the CMOSN transistor, set the channel length to 180nm and the channel width to 3.5 um.
 4. Under the "Simulate" option select "Configure Analysis", then choose the appropriate analysis mode (DC, AC, or Transient analysis) based on the circuit 
    requirements. Configure the necessary parameters and run the simulation to observe the circuit's behavior.
-5. DC Analysis - Apply the DC voltage of Vdd = 1.8V and Vgs = 0.95V , Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and press OK to 
+5. DC Analysis - Apply the DC voltage of Vdd = 1.8V and Vgs = 0.8V , Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and press OK to 
    apply the .op command. Then choose Run in the tab to see the DC operating point, including Vout and Id.
 6. AC Analysis - Go to Spice Directive and set the library file path. In the Simulate tab, choose Configure Analysis option, then AC Analysis. Set the sweep to 
    Decade, points to 10, and frequency from 1 Hz to 1000 GHz, then choose OK. Finally, choose Run to analyze gain and frequency response.     
@@ -65,7 +64,7 @@ Go to the Simulate tab and choose Configure Analysis. Select DC Analysis and pre
 
 
                               Id1 = Id2 => 0.276985 mA , Vout = 0.785124 V 
-                              Operating point of NMOSFETS = (0.785124 V , 0.276985 mA)
+                              
 
 ### TRANSIENT ANALYSIS 
 
@@ -77,7 +76,7 @@ In the Simulate tab choose Configure Analysis select Transient Analysis set the 
 
  
                               Voltage Gain = Vop-p/Vip-p ; (941.17mV - 632.42mV )/20mV ; 15.4375 V/V 
-                              Voltage Gain in dB = 20*log[15.4375] -> 23.772 dB ; Voltage gain
+                              Voltage Gain in dB = 20*log[15.4375] -> 23.772 dB 
 
 ### AC ANALYSIS
 
@@ -86,4 +85,26 @@ In the Simulate tab choose Configure Analysis select Transient Analysis set the 
 
 
                               Mid band Gain in dB = 23.951 ; Gain = 15.76  V/V
+
 ### L = 180nm [ 1:2 ratio ]
+
+### DC ANALYSIS
+
+<img src= "https://github.com/user-attachments/assets/9065ddec-6722-453d-995c-1f9be6380539" width = "600" height = "450">
+
+                              Id1 = 0.367736 mA , Vout = 1.03578 V ; Expected Id value -> 0.371mA 
+
+### TRANSIENT ANALYSIS 
+
+<img src= "https://github.com/user-attachments/assets/83c4db59-8675-42a1-893b-ad073aa48d2e" width = "800" height = "450">
+
+                              Voltage Gain = Vop-p/Vip-p ; (1.1794 V - 888.13 mV )/20mV ; 14.1905 V/V 
+                              Voltage Gain in dB = 20*log[14.1905] -> 23.04 dB 
+### AC ANALYSIS
+
+<img src= "https://github.com/user-attachments/assets/b2302ff3-0720-4a39-a76d-78c629bfbf4c" width = "800" height = "450">
+
+
+
+                              Mid band Gain in dB = 23.20955 ; Gain = 14.47  V/V
+                              
